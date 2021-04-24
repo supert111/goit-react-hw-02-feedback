@@ -1,1 +1,1 @@
-# goit-react-hw-02-feedback-
+# GoIT React Course Homework

@@ -7,7 +7,7 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
         <>
             <h2>Statistics</h2>
             { good || neutral || bad                         
-                ?   <ul>
+                ?   <ul className={styles.wrapper}>
                         <li className={styles.list}>Good: {good}</li>
                         <li className={styles.list}>Neutral: {neutral}</li>
                         <li className={styles.list}>Bad: {bad}</li>

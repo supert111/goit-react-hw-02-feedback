@@ -7,7 +7,7 @@ const Section = ({title, children}) => {
             {children}
         </section>          
     )
-}
+};
 
 Section.propTypes = {
     title: PropTypes.string.isRequired,

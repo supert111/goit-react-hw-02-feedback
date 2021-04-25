@@ -1,38 +1,20 @@
-import { Component } from 'react';
 
-//import { Fragment } from "react";
 
-class Statistics extends Component {
-    // state = {
-    //     good: 0,
-    //     neutral: 0,
-    //     bad: 0
-    // }
-
-    // countTotalFeedback() {
-
-    // }
-
-    render () {
-        return (
-            <section>
-                <h1>Please leave feedback</h1>
-                <div>
-                    <button>Good</button>
-                    <button>Neutral</button>
-                    <button>Bad</button>
-                </div>
-            </section>          
-        )
-    }
+const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
+    return (
+        <>
+            <h2>Statistics</h2>
+            { good || neutral || bad                         
+                ?   <ul>
+                        <li>Good: {good}</li>
+                        <li>Neutral: {neutral}</li>
+                        <li>Bad: {bad}</li>
+                        <li>Total: {total}</li>
+                        <li>Positive fedback: {positivePercentage}%</li>
+                    </ul>
+                :   <p>No feedback given</p>}
+        </>         
+    )
 }
 
-
 export default Statistics;
-
-
-// <>
-    // <Fragment>
-    //     <div></div>
-    //     <div></div>
-    // </Fragment>

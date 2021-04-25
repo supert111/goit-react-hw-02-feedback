@@ -1,8 +1,8 @@
 import { Component } from 'react';
 import Section from './components/Section/Section';
 import FeedbackOptions from './components/FeedbackOptions/FeedbackOptions';
+import Statistics from './components/Statistics/Statistics';
 
-//import Statistics from './components/Statistics/Statistics';
 //import MySecondComponent from './components/MySecondComponent';
 
 
@@ -31,12 +31,17 @@ class App extends Component {
     }
 
     render () {
-        console.log(this.countTotalFeedback())
+        const { good, neutral, bad } = this.state;
         return (
             <div>
                 <Section title="Please leave feedback"> 
                     <FeedbackOptions options={this.state} onLeaveFeedback={this.handleClick} />
-
+                    <Statistics 
+                        good={good} 
+                        neutral={neutral} 
+                        bad={bad} 
+                        total={this.countTotalFeedback()} 
+                        positivePercentage={this.countPositiveFeedbackPercentage()} />
                 </Section>
             </div>
         )

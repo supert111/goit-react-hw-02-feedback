@@ -1,4 +1,4 @@
-
+import Notification from '../Notification/Notification';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
     return (
@@ -12,7 +12,8 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
                         <li>Total: {total}</li>
                         <li>Positive fedback: {positivePercentage}%</li>
                     </ul>
-                :   <p>No feedback given</p>}
+                :   <Notification message="No feedback given" />
+            }
         </>         
     )
 }

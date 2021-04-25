@@ -1,18 +1,16 @@
-//import PropTypes from 'prop-types';
-
+import PropTypes from 'prop-types';
 
 const Section = ({title, children}) => {
     return (
         <section>
             <h1>{title}</h1>
             {children}
-            {/* <div>
-                <button>Good</button>
-                <button>Neutral</button>
-                <button>Bad</button>
-            </div> */}
         </section>          
     )
 }
 
+Section.propTypes = {
+    title: PropTypes.string.isRequired,
+   // children: PropTypes.isRequired,
+  };
 export default Section;

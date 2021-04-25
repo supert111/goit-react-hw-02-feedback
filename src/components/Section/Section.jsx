@@ -2,7 +2,6 @@
 
 
 const Section = ({title, children}) => {
-    console.log(children)
     return (
         <section>
             <h1>{title}</h1>

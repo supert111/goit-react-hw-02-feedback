@@ -1,4 +1,10 @@
 .button {
     border-radius: 5px;
     margin: 0 10px 0 0;
+    text-transform: capitalize;
 }
+
+.button:first-letter {
+    color: brown;
+    font-size: 20px;
+  }
